@@ -1,8 +1,8 @@
-# ZeroToShip | Summer Activity 2026 - Participant Notes
+# ZeroToShip | Summer Activity 2026
 
 ## Repository Requirement
 
-Please ensure you have created a **public GitHub repository**, preferably named `ZeroToShip` (or a similar name of your choice).
+GitHub repository with the following structure.
 
 ## Suggested Repository Structure
 
@@ -29,16 +29,3 @@ The `Final-Integration` folder should contain:
 1. The final integrated project.
 2. Complete documentation.
 3. Final deliverables.
-
-## Timeline Update
-
-**Phase 1 details and instructions will be shared today at 12:00 PM.**
-
-## Contacts for Questions or Private Discussion
-
-- Me
-- @Aatka
-- @Noor Ul Ain
-- @Aaisha Jamil NED CIS
-
-We look forward to seeing your progress throughout **ZeroToShip | Summer Activity 2026**. 🚀
