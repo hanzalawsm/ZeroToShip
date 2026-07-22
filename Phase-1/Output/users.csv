@@ -1,0 +1,6 @@
+user_id,name,email,password_hash
+1,"Ali Khan",ali.khan@example.com,hash_ali_001
+2,"Sara Ahmed",sara.ahmed@example.com,hash_sara_002
+3,"Hamza Raza",hamza.raza@example.com,hash_hamza_003
+4,"Noor Fatima",noor.fatima@example.com,hash_noor_004
+5,"Ayesha Iqbal",ayesha.iqbal@example.com,hash_ayesha_005

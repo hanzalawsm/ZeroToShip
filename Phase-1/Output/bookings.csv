@@ -1,0 +1,7 @@
+booking_id,user_id,provider_id,booking_time,status
+1,1,1,"2026-07-25 10:00:00",Pending
+2,2,2,"2026-07-25 12:00:00",Confirmed
+3,3,4,"2026-07-26 09:30:00",Completed
+4,4,6,"2026-07-26 14:15:00",Cancelled
+5,5,10,"2026-07-27 11:45:00",Pending
+6,2,9,"2026-07-27 16:20:00",Confirmed
