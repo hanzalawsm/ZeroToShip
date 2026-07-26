@@ -5,7 +5,7 @@ No backend server logic or AI components are included in this phase.
 
 ## Deliverables
 
-- `backend/database/schema.sql`
+- `Phase-2/backend/database/schema.sql`
 - `Phase-1/database/seed.sql`
 - `Phase-1/database/validate.sql`
 - `Phase-1/Output/` (screenshots of execution and results)
@@ -36,7 +36,7 @@ No backend server logic or AI components are included in this phase.
 From repository root:
 
 ```powershell
-sqlite3 Phase-1/database/phase1.db ".read backend/database/schema.sql"
+sqlite3 Phase-1/database/phase1.db ".read Phase-2/backend/database/schema.sql"
 sqlite3 Phase-1/database/phase1.db ".read Phase-1/database/seed.sql"
 sqlite3 Phase-1/database/phase1.db ".read Phase-1/database/validate.sql"
 ```
@@ -92,7 +92,7 @@ Constraints:
 
 ## Submission Checklist
 
-- [X] `backend/database/schema.sql` defines all 3 required tables and keys.
+- [X] `Phase-2/backend/database/schema.sql` defines all 3 required tables and keys.
 - [X] `seed.sql` inserts realistic mock records.
 - [X] `validate.sql` returns PASS for all checks.
 - [X] `Output/` contains execution proof screenshots.

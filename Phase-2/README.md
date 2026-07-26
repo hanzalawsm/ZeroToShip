@@ -4,9 +4,9 @@ Phase 2 delivers a working backend service with registration and login endpoints
 
 ## What was implemented
 
-- Backend code: `backend/`
-- Database schema: `backend/database/schema.sql`
-- SQLite database: `backend/database/app.db`
+- Backend code: `Phase-2/backend/`
+- Database schema: `Phase-2/backend/database/schema.sql`
+- SQLite database: `Phase-2/backend/database/app.db`
 - Output artifacts: `Phase-2/Output/`
 
 ## Approach
@@ -18,11 +18,12 @@ Phase 2 delivers a working backend service with registration and login endpoints
 ## Run (from repository root)
 
 ```powershell
-uv run uvicorn backend.main:app --reload
+cd Phase-2/backend
+uv run uvicorn main:app --reload
 ```
 
 ## Deliverables
 
-- [x] Backend service scaffolded and organized under `backend/`
-- [x] Database schema and fresh DB present in `backend/database/`
+- [x] Backend service scaffolded and organized under `Phase-2/backend/`
+- [x] Database schema and fresh DB present in `Phase-2/backend/database/`
 - [x] Output evidence captured in `Phase-2/Output/`
