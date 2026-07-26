@@ -1,3 +1,6 @@
 # Phase 2
 
-Document your Phase 2 progress, approach, and learnings here.
+This phase now contains the shared database assets:
+
+- `Phase-2/database/schema.sql`
+- `Phase-2/database/app.db` (fresh SQLite database created from the schema)
