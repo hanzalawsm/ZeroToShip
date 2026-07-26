@@ -5,7 +5,7 @@ No backend server logic or AI components are included in this phase.
 
 ## Deliverables
 
-- `Phase-2/backend/database/schema.sql`
+- `Phase-1/database/schema.sql`
 - `Phase-1/database/seed.sql`
 - `Phase-1/database/validate.sql`
 - `Phase-1/Output/` (screenshots of execution and results)
