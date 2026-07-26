@@ -1,6 +1,6 @@
 # Phase 2
 
-This phase now contains the shared database assets:
+The shared database assets were moved to backend:
 
-- `Phase-2/database/schema.sql`
-- `Phase-2/database/app.db` (fresh SQLite database created from the schema)
+- `backend/database/schema.sql`
+- `backend/database/app.db` (fresh SQLite database created from the schema)
