@@ -2,6 +2,7 @@
 from typing import Optional
 from datetime import datetime
 from sqlmodel import SQLModel, Field
+from pydantic import BaseModel
 
 # --- DATABASE MODELS ---
 
@@ -56,3 +57,19 @@ class UserResponse(SQLModel):
     user_id: int
     name: str
     email: str
+
+# --- PHASE 3 SCHEMAS ---
+
+class OrchestrateRequest(BaseModel):
+    prompt: str  # Supports English, Urdu, Roman Urdu
+
+class ExtractedIntent(BaseModel):
+    service: Optional[str] = Field(description="The requested service/category, e.g., Electrician, Plumber")
+    location: Optional[str] = Field(description="The neighborhood or zone requested")
+    time: Optional[str] = Field(description="Extracted time or urgency, e.g., Tomorrow at 3 PM, Urgent")
+
+class OrchestrateResponse(BaseModel):
+    intent: ExtractedIntent
+    top_provider: Optional[Provider]
+    all_matches: List[Provider]
+    explanation: str
