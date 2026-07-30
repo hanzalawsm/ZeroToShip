@@ -3,10 +3,11 @@ from fastapi import FastAPI, Depends, HTTPException, status
 from sqlmodel import Session, select
 
 from database import get_session
-from models import User, Booking, UserRegister, UserLogin, TokenResponse, UserResponse
+from models import User, Booking, UserRegister, UserLogin, TokenResponse, UserResponse, OrchestrateRequest, OrchestrateResponse
 from auth import hash_password, verify_password, create_access_token, get_current_user
+from orchestrator import orchestrate
 
-app = FastAPI(title="Smart Local Service Orchestrator - Phase 2 Backend")
+app = FastAPI(title="Smart Local Service Orchestrator - Phase 3 Backend")
 
 @app.post("/register", response_model=UserResponse, status_code=status.HTTP_201_CREATED)
 def register(user_data: UserRegister, session: Session = Depends(get_session)):
@@ -64,3 +65,18 @@ def cancel_booking(
     session.add(booking)
     session.commit()
     return {"message": f"Booking {booking_id} cancelled successfully"}
+
+
+@app.post("/api/orchestrate", response_model=OrchestrateResponse)
+def orchestrate_endpoint(
+    request: OrchestrateRequest,
+    session: Session = Depends(get_session)
+):
+    """Phase 3 Intent Extraction & Ranking Endpoint."""
+    if not request.prompt or not request.prompt.strip():
+        raise HTTPException(status_code=400, detail="Prompt must not be empty.")
+    try:
+        return orchestrate(request.prompt, session)
+    except RuntimeError as e:
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=str(e))
+

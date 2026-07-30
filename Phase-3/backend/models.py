@@ -1,5 +1,5 @@
 # Phase-2/backend/models.py
-from typing import Optional
+from typing import Optional, List
 from datetime import datetime
 from sqlmodel import SQLModel, Field
 from pydantic import BaseModel
