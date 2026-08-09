@@ -1,0 +1,121 @@
+.chat-bubble-container {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+  max-width: 85%;
+}
+
+.chat-bubble-container.user {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.chat-bubble-container.ai {
+  align-self: flex-start;
+}
+
+.chat-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  flex-shrink: 0;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.ai-avatar {
+  background: var(--accent-gradient);
+  color: var(--bg-color);
+  box-shadow: 0 0 20px var(--accent-glow);
+}
+
+.chat-content-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  min-width: 0;
+}
+
+.chat-bubble {
+  padding: 16px 20px;
+  position: relative;
+  border-radius: var(--radius-lg);
+  line-height: 1.5;
+}
+
+.user-bubble {
+  background: var(--surface-raised);
+  color: var(--text-primary);
+  border-bottom-right-radius: 4px;
+}
+
+.ai-bubble {
+  border-bottom-left-radius: 4px;
+  /* Uses the global .glass class styles */
+}
+
+.chat-text {
+  font-size: 15px;
+  margin-bottom: 8px;
+}
+
+.chat-time {
+  font-size: 11px;
+  color: var(--text-muted);
+  display: block;
+  text-align: right;
+}
+
+.ai-reasoning {
+  background: rgba(0, 229, 255, 0.03);
+  border: 1px solid rgba(0, 229, 255, 0.1);
+  padding: 16px;
+  border-radius: var(--radius-md);
+  margin-top: 4px;
+}
+
+.reasoning-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent-primary);
+  margin-bottom: 8px;
+}
+
+.reasoning-summary {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-bottom: 12px;
+}
+
+.reasoning-factors {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.reasoning-factors li {
+  font-size: 13px;
+  color: var(--text-primary);
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.reasoning-factors li::before {
+  content: '✓';
+  color: var(--success);
+  font-weight: bold;
+}
+
+.chat-providers {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}

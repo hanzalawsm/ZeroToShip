@@ -1,0 +1,67 @@
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-color, #050811);
+  position: relative;
+  overflow: hidden; /* Prevent body scroll if not needed, we scroll main */
+}
+
+.app-main {
+  flex: 1;
+  transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  margin-left: var(--sidebar-width, 260px);
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-main.sidebar-collapsed {
+  margin-left: var(--sidebar-collapsed, 72px);
+}
+
+.mobile-menu-btn {
+  display: none;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  z-index: 90;
+  background: var(--surface-raised, rgba(255, 255, 255, 0.05));
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid var(--border-color, rgba(255, 255, 255, 0.1));
+  color: var(--text-primary, #ffffff);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md, 0.5rem);
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.2s;
+}
+
+.mobile-menu-btn:hover {
+  background: var(--surface-hover, rgba(255, 255, 255, 0.1));
+}
+
+.mobile-menu-btn svg {
+  width: 24px;
+  height: 24px;
+}
+
+@media (max-width: 768px) {
+  .app-main {
+    margin-left: 0;
+    padding: 4rem 1rem 1rem 1rem; /* Extra top padding for mobile menu btn */
+  }
+
+  .app-main.sidebar-collapsed {
+    margin-left: 0;
+  }
+
+  .mobile-menu-btn {
+    display: flex;
+  }
+}
