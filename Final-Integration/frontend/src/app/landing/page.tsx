@@ -39,9 +39,11 @@ export default function LandingPage({ onOpenAuth }: LandingPageProps) {
   return (
     <div className="landing-container">
       {/* Background Decorative Elements */}
-      <div className="bg-gradient-orb orb-1"></div>
-      <div className="bg-gradient-orb orb-2"></div>
-      <div className="bg-gradient-orb orb-3"></div>
+      <div className="landing-bg-orbs">
+        <div className="bg-gradient-orb orb-1"></div>
+        <div className="bg-gradient-orb orb-2"></div>
+        <div className="bg-gradient-orb orb-3"></div>
+      </div>
 
       {/* Hero Section */}
       <section className="hero-section" ref={(el) => { sectionsRef.current[0] = el; }}>

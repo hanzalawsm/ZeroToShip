@@ -4,11 +4,22 @@
   background-color: var(--bg-color, #0a0e1a);
   color: var(--text-primary, #f1f5f9);
   font-family: var(--font-sans, 'Inter', sans-serif);
-  overflow-x: hidden;
   position: relative;
 }
 
-/* Background Orbs */
+.app-main .landing-container {
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* Background Orbs Wrapper */
+.landing-bg-orbs {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+}
 .bg-gradient-orb {
   position: absolute;
   border-radius: 50%;
